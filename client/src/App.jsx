@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Hiring from "./pages/Hiring/Hiring";
+import JoinUs from "./pages/JoinUs/JoinUs";
 import Partnership from "./pages/Partnership/Partnership";
 import FAQ from "./pages/FAQ/FAQ";
 
@@ -18,8 +18,8 @@ const App = () => {
         <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/hiring">
-          <Hiring />
+        <Route path="/joinus">
+          <JoinUs />
         </Route>
         <Route path="/partnership">
           <Partnership />
