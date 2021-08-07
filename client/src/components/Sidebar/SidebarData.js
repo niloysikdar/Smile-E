@@ -1,6 +1,6 @@
 import { AiFillHome, AiFillDashboard, AiOutlineLogout } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
-import { IoMdHelpCircle } from "react-icons/io";
+import { IoMdHelpCircle, IoIosPaper } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
 
 export const SidebarData = [
@@ -24,11 +24,11 @@ export const SidebarData = [
     path: "/partnership",
     icon: <FaHandshake />,
   },
-  // {
-  //   title: "Volunteer",
-  //   path: "/volunteer",
-  //   icon: <IoMdPeople />,
-  // },
+  {
+    title: "Agreement",
+    path: "/agreement",
+    icon: <IoIosPaper />,
+  },
   {
     title: "FAQ",
     path: "/faq",

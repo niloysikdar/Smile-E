@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import JoinUs from "./pages/JoinUs/JoinUs";
 import Partnership from "./pages/Partnership/Partnership";
+import Agreement from "./pages/Agreement";
 import FAQ from "./pages/FAQ/FAQ";
 
 const App = () => {
@@ -23,6 +24,9 @@ const App = () => {
         </Route>
         <Route path="/partnership">
           <Partnership />
+        </Route>
+        <Route path="/agreement">
+          <Agreement />
         </Route>
         <Route path="/faq">
           <FAQ />
