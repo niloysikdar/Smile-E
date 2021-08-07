@@ -1,0 +1,13 @@
+.thumbs {
+  &.animated {
+    display: none;
+  }
+}
+
+.thumbs-wrapper {
+  display: none;
+}
+
+img {
+  height: calc(100vh - 60px);
+}
