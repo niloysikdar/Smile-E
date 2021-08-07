@@ -15,8 +15,8 @@ export const SidebarData = [
     icon: <AiFillDashboard />,
   },
   {
-    title: "Hiring",
-    path: "/hiring",
+    title: "Join Us",
+    path: "/joinus",
     icon: <RiTeamFill />,
   },
   {
