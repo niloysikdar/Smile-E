@@ -17,16 +17,16 @@ const Sidebar = () => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
-          <Link to="#" className="menu-bars">
+          <div className="menu-bars">
             <FaBars onClick={showSidebar} />
-          </Link>
+          </div>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
+              <div className="menu-bars">
                 <AiOutlineClose />
-              </Link>
+              </div>
             </li>
             {SidebarData.map((item, index) => {
               return (
