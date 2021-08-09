@@ -6,20 +6,20 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 100px;
 
   .agreement-content {
     display: flex;
     margin-top: 2rem;
     width: 100%;
-    gap: 5rem;
     padding-left: 5rem;
+    flex-wrap: wrap;
 
     .dropContainer {
       height: 70vh;
-      width: 50%;
+      width: 650px;
       padding: 3rem;
       padding-top: 0;
       display: flex;
@@ -42,26 +42,17 @@
       }
     }
 
-    .submit-form form {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .submit-form {
+      text-align: start;
+      padding-right: 5rem;
+      padding-left: 5rem;
 
-      label {
-        font-size: 1.4rem;
-        margin: 0.5rem 0;
+      p {
+        margin-bottom: 1rem;
       }
 
-      input {
-        font-size: 1.2rem;
-        padding: 0.2rem 0.5rem;
-        width: 300px;
-        outline: none;
-        border-radius: 10px;
-      }
-
-      button {
-        margin-top: 2rem;
+      .docusign-login {
+        text-decoration: none;
         padding: 0.5rem 1.2rem;
         background-color: $midnightblue;
         color: #fff;
@@ -70,6 +61,46 @@
         border-radius: 10px;
         font-size: 1.1rem;
         cursor: pointer;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+
+        label {
+          font-size: 1.4rem;
+          margin: 0.5rem 0;
+        }
+
+        input {
+          font-size: 1.2rem;
+          padding: 0.2rem 0.5rem;
+          width: 300px;
+          outline: none;
+          border-radius: 10px;
+        }
+
+        textarea {
+          font-size: 1.2rem;
+          padding: 0.2rem 0.5rem;
+          width: 300px;
+          outline: none;
+          border-radius: 10px;
+        }
+
+        button {
+          margin-top: 2rem;
+          padding: 0.5rem 1.2rem;
+          background-color: $midnightblue;
+          color: #fff;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
       }
     }
   }
