@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { Link } from "react-router-dom";
 
-import { AuthorizeDocusign } from "../../api";
+import { AuthorizeDocusign, sendEnvelope } from "../../api";
 import { getBase64 } from "./convertToBase64";
 import "./agreement.scss";
 
@@ -34,9 +34,16 @@ const Agreement = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(docName, emailSubject, signerEmail, signerName);
-    // getBase64(acceptedFiles[0], (result) => {
-    //   console.log(result);
-    // });
+    getBase64(acceptedFiles[0], (result) => {
+      sendEnvelope(
+        result,
+        "pdf",
+        docName,
+        emailSubject,
+        signerEmail,
+        signerName
+      );
+    });
   };
 
   const handleSignIn = (e) => {
