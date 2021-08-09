@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { Link } from "react-router-dom";
 
-import { AuthorizeDocusign, sendEnvelope } from "../../api";
+import { sendEnvelope } from "../../api";
 import { getBase64 } from "./convertToBase64";
 import "./agreement.scss";
 
 const Agreement = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   const [docName, setDocName] = useState("");
   const [emailSubject, setEmailSubject] = useState("");
   const [signerEmail, setSignerEmail] = useState("");
   const [signerName, setSignerName] = useState("");
 
   const isUserLoggedIn = localStorage.getItem("isLoggedIn");
-  // const isUserLoggedIn = false;
+  // const isUserLoggedIn = true;
 
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
     maxFiles: 1,
@@ -36,11 +38,9 @@ const Agreement = () => {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    // const codeFromUrl = uriCode.split("=")[1];
-    // console.log(codeFromUrl);
-    // AuthorizeDocusign(codeFromUrl);
     localStorage.setItem("isLoggedIn", true);
-    localStorage.setItem("access_token", process.env.REACT_APP_ACCESS_TOKEN);
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
     window.location.reload();
   };
 
@@ -67,39 +67,37 @@ const Agreement = () => {
         <div className="submit-form">
           {!isUserLoggedIn ? (
             <>
-              {/* <p>
-                Click the Authenticate button and paste the redirect url below
-                and then press Sign In
-              </p> */}
-              <p>
-                Click the Authenticate button to Authenticate with DocuSign
-                Account
-              </p>
-              {/* <Link
-                to={{ pathname: linkurl }}
-                className="docusign-login"
-                target="_blank"
-              >
-                Authenticate
-              </Link> */}
-              {/* <form onSubmit={handleSignIn}>
+              <p>Authenticate with your Admin DocuSign Account</p>
+
+              <form onSubmit={handleSignIn}>
+                <label htmlFor="username">Admin Username</label>
                 <input
-                  type="text"
+                  type="email"
+                  id="username"
                   required
-                  placeholder="Redirect URI"
-                  value={uriCode}
-                  onChange={(e) => setUriCode(e.target.value)}
+                  placeholder="Admin Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 />
+
+                <label htmlFor="password">Admin Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  required
+                  placeholder="Admin Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+
                 <button type="submit" className="docusign-login">
                   Sign In with DocuSign
                 </button>
-              </form> */}
-              <button className="docusign-login" onClick={handleSignIn}>
-                Sign In with DocuSign
-              </button>
+              </form>
             </>
           ) : (
             <form onSubmit={handleSubmit}>
+              <p>Agreement Details :</p>
               <label htmlFor="docname">Document Name</label>
               <input
                 type="text"
@@ -139,7 +137,7 @@ const Agreement = () => {
                 value={signerName}
                 onChange={(e) => setSignerName(e.target.value)}
               />
-              <button type="submit">Send Email</button>
+              <button type="submit">Send Agreement</button>
             </form>
           )}
         </div>
