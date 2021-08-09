@@ -6,12 +6,7 @@ import { AuthorizeDocusign, sendEnvelope } from "../../api";
 import { getBase64 } from "./convertToBase64";
 import "./agreement.scss";
 
-const INTEGRATION_KEY = process.env.REACT_APP_INTEGRATION_KEY;
-const linkurl = `https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=${INTEGRATION_KEY}&redirect_uri=http://localhost/`;
-
 const Agreement = () => {
-  const [uriCode, setUriCode] = useState("");
-
   const [docName, setDocName] = useState("");
   const [emailSubject, setEmailSubject] = useState("");
   const [signerEmail, setSignerEmail] = useState("");
@@ -35,14 +30,7 @@ const Agreement = () => {
     e.preventDefault();
     console.log(docName, emailSubject, signerEmail, signerName);
     getBase64(acceptedFiles[0], (result) => {
-      sendEnvelope(
-        result,
-        "pdf",
-        docName,
-        emailSubject,
-        signerEmail,
-        signerName
-      );
+      sendEnvelope(result, docName, emailSubject, signerEmail, signerName);
     });
   };
 

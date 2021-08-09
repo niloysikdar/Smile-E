@@ -27,47 +27,25 @@ const AuthorizeDocusign = async (codeFromUrl) => {
 
 const sendEnvelope = async (
   documentBase64,
-  fileExtension,
   docName,
   emailSubject,
   signerEmail,
   signerName
 ) => {
   const data = {
-    documents: [
-      {
-        documentBase64: documentBase64,
-        documentId: 1234,
-        fileExtension: fileExtension,
-        name: docName,
-      },
-    ],
+    accountID: process.env.REACT_APP_ACCOUNT_ID,
+    username: localStorage.getItem("username"),
+    password: localStorage.getItem("password"),
+    integratorKey: process.env.REACT_APP_INTEGRATION_KEY,
+    documentBase64: documentBase64,
+    docName: docName,
     emailSubject: emailSubject,
-    recipients: {
-      signers: [
-        {
-          email: signerEmail,
-          name: signerName,
-          recipientId: "1234",
-        },
-      ],
-    },
-    status: "sent",
+    signerEmail: signerEmail,
+    signerName: signerName,
   };
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "*/*",
-      Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
-    },
-    data,
-    url: `https://demo.docusign.net/restapi/v2.1/accounts/${process.env.REACT_APP_ACCOUNT_ID}/envelopes`,
-  };
-
-  const response = await axios(options);
-  console.log(response);
+  const result = await axios.post("http://localhost:5000/create", data);
+  console.log(result.data);
 };
 
 export { AuthorizeDocusign, sendEnvelope };
