@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home";
 import { Dashboard } from "./pages/Dashboard";
 import JoinUs from "./pages/JoinUs/JoinUs";
-import Partnership from "./pages/Partnership/Partnership";
+import { Partnership } from "./pages/Partnership";
 import Agreement from "./pages/Agreement";
 import FAQ from "./pages/FAQ/FAQ";
 import { Logout } from "./pages/Logout";
