@@ -2,6 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
+const createUser = require("../controllers/createUser");
+
 router.post("/", async (req, res) => {
   const {
     accountID,
@@ -49,7 +51,13 @@ router.post("/", async (req, res) => {
   })
     .then((result) => {
       console.log(result.data);
-      res.status(result.status).json(result.data);
+      createUser(signerName).then((val) => {
+        if (val) {
+          res.status(result.status).json(result.data);
+        } else {
+          console.log("Creating user error !");
+        }
+      });
     })
     .catch((error) => {
       console.log(error);
