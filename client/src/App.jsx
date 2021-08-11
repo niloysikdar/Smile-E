@@ -2,7 +2,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import { Dashboard } from "./pages/Dashboard";
 import JoinUs from "./pages/JoinUs/JoinUs";
 import Partnership from "./pages/Partnership/Partnership";
 import Agreement from "./pages/Agreement";
