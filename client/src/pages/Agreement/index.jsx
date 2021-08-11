@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
+import swal from "sweetalert";
 
 import { sendEnvelope } from "../../api";
 import { getBase64 } from "./convertToBase64";
@@ -32,7 +33,16 @@ const Agreement = () => {
     e.preventDefault();
     console.log(docName, emailSubject, signerEmail, signerName);
     getBase64(acceptedFiles[0], (result) => {
-      sendEnvelope(result, docName, emailSubject, signerEmail, signerName);
+      sendEnvelope(result, docName, emailSubject, signerEmail, signerName).then(
+        (res) => {
+          clearFields();
+          if (res.status === 201) {
+            swal("Success", "Agreement Sent Successfully !", "success");
+          } else {
+            swal("Error", "Failed to send the Agreement !", "error");
+          }
+        }
+      );
     });
   };
 
@@ -42,6 +52,13 @@ const Agreement = () => {
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
     window.location.reload();
+  };
+
+  const clearFields = () => {
+    setDocName("");
+    setEmailSubject("");
+    setSignerEmail("");
+    setSignerName("");
   };
 
   return (

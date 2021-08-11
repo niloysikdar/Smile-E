@@ -20,7 +20,7 @@ const sendEnvelope = async (
   };
 
   const result = await axios.post("http://localhost:5000/create", data);
-  console.log(result.data);
+  return result;
 };
 
 export { sendEnvelope };
