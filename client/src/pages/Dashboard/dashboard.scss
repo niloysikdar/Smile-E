@@ -1,0 +1,23 @@
+@import "../../constants/colors";
+
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 90px;
+  background: $bluebackground;
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+
+  .charts {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
