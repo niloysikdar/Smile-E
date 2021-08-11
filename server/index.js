@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
 const createEnvelope = require("./routes/sendEnvelope");
 app.use("/create", createEnvelope);
 
+const userRoutes = require("./routes/usersRoute");
+app.use("/users", userRoutes);
+
 mongoose
   .connect(CONNECTION_URL, {
     useNewUrlParser: true,
