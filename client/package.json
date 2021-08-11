@@ -11,7 +11,8 @@
     "react-icons": "^4.2.0",
     "react-responsive-carousel": "^3.2.20",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

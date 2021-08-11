@@ -7,6 +7,7 @@ import JoinUs from "./pages/JoinUs/JoinUs";
 import Partnership from "./pages/Partnership/Partnership";
 import Agreement from "./pages/Agreement";
 import FAQ from "./pages/FAQ/FAQ";
+import { Logout } from "./pages/Logout";
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
         </Route>
         <Route path="/faq">
           <FAQ />
+        </Route>
+        <Route path="/logout">
+          <Logout />
         </Route>
       </Switch>
     </>
