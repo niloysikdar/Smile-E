@@ -1,8 +1,8 @@
-const Card = () => {
+const Card = ({ name, joined }) => {
   return (
     <div className="card">
-      <h3>Niloy Sikdar</h3>
-      <p>Joined: August 12, 2021</p>
+      <h3>{name}</h3>
+      <p>Joined: {joined}</p>
     </div>
   );
 };
