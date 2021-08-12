@@ -1,7 +1,11 @@
+import styles from "./faq.module.scss";
+
 const FAQ = () => {
   return (
-    <div>
-      <h2 style={{ textAlign: "center" }}>FAQ</h2>
+    <div className={styles.faq}>
+      <h2>FAQ</h2>
+      <h3>Do you have any queries ?</h3>
+      <p>Drop an email at admin@smilee.com</p>
     </div>
   );
 };

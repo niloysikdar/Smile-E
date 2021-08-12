@@ -20,6 +20,7 @@ const Sidebar = () => {
           <div className="menu-bars">
             <FaBars onClick={showSidebar} />
           </div>
+          <p>Support Us for a good cause</p>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

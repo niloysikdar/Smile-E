@@ -22,7 +22,7 @@ const Partnership = () => {
 
   return (
     <div className="partnership">
-      <h2>Partner or Join Us as Volunteer</h2>
+      <h2>Partner with or Join us as Volunteer</h2>
       {localStorage.getItem("isLoggedIn") && (
         <Link to="/agreement" className="button-to-agreement">
           Send the E-Agreement

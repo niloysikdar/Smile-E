@@ -63,7 +63,7 @@ const Agreement = () => {
 
   return (
     <div className="agreement">
-      <h2>Agreement Portal using the DocuSign eSignature API</h2>
+      <h2>E-Agreement Portal</h2>
       <div className="agreement-content">
         {isUserLoggedIn && (
           <section className="dropContainer">
