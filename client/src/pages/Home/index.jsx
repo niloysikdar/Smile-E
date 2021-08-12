@@ -19,7 +19,7 @@ const Home = () => {
           </Link>
         </div>
         <Link to="/dashboard" className={styles.button}>
-          Our Works
+          Our Work
         </Link>
       </div>
     </div>

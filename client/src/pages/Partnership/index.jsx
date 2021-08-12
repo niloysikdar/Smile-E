@@ -33,7 +33,7 @@ const Partnership = () => {
 
       <div className="card-container">
         <div className="partnership-content">
-          <h2>Our Volunteers :</h2>
+          <h3>Our Volunteers :</h3>
           <div className="cards">
             {volunteers.map((user) => (
               <Card key={user._id} name={user.name} joined={user.joined} />
@@ -42,7 +42,7 @@ const Partnership = () => {
         </div>
 
         <div className="partnership-content">
-          <h2>Our Partners :</h2>
+          <h3>Our Partners :</h3>
           <div className="cards">
             {partners.map((user) => (
               <Card key={user._id} name={user.name} joined={user.joined} />
