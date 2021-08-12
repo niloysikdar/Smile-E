@@ -8,12 +8,14 @@ const Home = () => {
     <div className={styles.home}>
       <NewCarousel />
       <div className={styles.content}>
-        <h2>Donate for a good cause</h2>
+        <h2>Smile-E</h2>
+        <h3>Sharing smile with the world</h3>
+        <p>Donate for a good cause</p>
         <div className="buttons">
           <Link to="/partnership" className={styles.button}>
             Partnership
           </Link>
-          <Link to="/joinus" className={styles.button}>
+          <Link to="/partnership" className={styles.button}>
             Join Us
           </Link>
         </div>
