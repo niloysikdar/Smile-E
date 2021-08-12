@@ -39,7 +39,7 @@ const options = {
 const VerticalBarChart = () => {
   return (
     <>
-      <h4 style={{ fontWeight: "400" }}>
+      <h4 style={{ fontWeight: "400", fontSize: "1.1rem" }}>
         Total number of students whom we provided free education
       </h4>
       <Bar data={data} options={options} />

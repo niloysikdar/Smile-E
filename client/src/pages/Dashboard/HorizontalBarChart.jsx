@@ -45,7 +45,7 @@ const options = {
 const HorizontalBarChart = () => {
   return (
     <>
-      <h4 style={{ fontWeight: "400" }}>
+      <h4 style={{ fontWeight: "400", fontSize: "1.1rem" }}>
         Total number of people whom we helped
       </h4>
       <Bar data={data} options={options} />
