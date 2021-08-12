@@ -16,7 +16,7 @@ export const SidebarData = [
   },
   {
     title: "Join Us",
-    path: "/joinus",
+    path: "/partnership",
     icon: <RiTeamFill />,
   },
   {

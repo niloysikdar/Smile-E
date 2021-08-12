@@ -21,13 +21,29 @@
     align-items: center;
 
     h2 {
-      color: $bluebackground;
+      color: #fff;
       text-transform: uppercase;
       font-size: 3.5rem;
       font-weight: bold;
       letter-spacing: 5px;
-      margin-bottom: 3rem;
       text-align: center;
+    }
+
+    h3 {
+      color: $bluebackground;
+      font-weight: 500;
+      font-size: 3rem;
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      color: $bluebackground;
+      font-weight: 500;
+      font-size: 2rem;
+      letter-spacing: 5px;
+      margin-bottom: 3rem;
     }
   }
 }
