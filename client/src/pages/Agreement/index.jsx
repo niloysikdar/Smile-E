@@ -6,6 +6,9 @@ import { sendEnvelope } from "../../api";
 import { getBase64 } from "./convertToBase64";
 import "./agreement.scss";
 
+const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD;
+
 const Agreement = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -48,10 +51,14 @@ const Agreement = () => {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    localStorage.setItem("isLoggedIn", true);
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
-    window.location.reload();
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+      localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+      window.location.reload();
+    } else {
+      swal("Error", "Invalid Admin Username or Password !", "error");
+    }
   };
 
   const clearFields = () => {
