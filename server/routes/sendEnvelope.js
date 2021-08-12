@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
     emailSubject,
     signerEmail,
     signerName,
+    role,
   } = req.body;
 
   axios({
@@ -51,7 +52,7 @@ router.post("/", async (req, res) => {
   })
     .then((result) => {
       console.log(result.data);
-      createUser(signerName).then((val) => {
+      createUser(signerName, role).then((val) => {
         if (val) {
           res.status(result.status).json(result.data);
         } else {

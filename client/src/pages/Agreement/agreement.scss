@@ -124,3 +124,17 @@
     }
   }
 }
+
+#role {
+  color: #000000b9;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  background: $bluebackground;
+  box-shadow: 0 4px 8px 0 $lightblue;
+  cursor: pointer;
+}

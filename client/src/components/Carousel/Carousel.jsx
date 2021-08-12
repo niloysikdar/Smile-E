@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import pic1 from "../../assets/carousel/pic1.jpg";
 import pic2 from "../../assets/carousel/pic2.jpg";
-import pic3 from "../../assets/carousel/pic3.jpg";
 import "./Carousel.scss";
 
 const NewCarousel = () => {
@@ -22,9 +21,6 @@ const NewCarousel = () => {
       </div>
       <div>
         <img src={pic2} alt="Carousel" />
-      </div>
-      <div>
-        <img src={pic3} alt="Carousel" />
       </div>
     </Carousel>
   );

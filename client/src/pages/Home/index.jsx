@@ -9,7 +9,7 @@ const Home = () => {
       <NewCarousel />
       <div className={styles.content}>
         <h2>Smile-E</h2>
-        <h3>Sharing smile with the world</h3>
+        <h3>Sharing smiles with the world</h3>
         <div className="buttons">
           <Link to="/partnership" className={styles.button}>
             Partnership

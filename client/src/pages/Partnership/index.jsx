@@ -6,7 +6,8 @@ import { Card } from "./Card";
 import "./partnership.scss";
 
 const Partnership = () => {
-  const [users, setUsers] = useState([]);
+  const [partners, setPartners] = useState([]);
+  const [volunteers, setVolunteer] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -16,7 +17,8 @@ const Partnership = () => {
     const result = await getUsers();
     if (result.status === 200) {
       const data = result.data;
-      setUsers(data);
+      setPartners(data.filter((item) => item.role !== "Volunteer"));
+      setVolunteer(data.filter((item) => item.role === "Volunteer"));
     }
   };
 
@@ -29,12 +31,23 @@ const Partnership = () => {
         </Link>
       )}
 
-      <div className="partnership-content">
-        <h2>Our Partners and Volunteers :</h2>
-        <div className="cards">
-          {users.map((user) => (
-            <Card key={user._id} name={user.name} joined={user.joined} />
-          ))}
+      <div className="card-container">
+        <div className="partnership-content">
+          <h2>Our Volunteers :</h2>
+          <div className="cards">
+            {volunteers.map((user) => (
+              <Card key={user._id} name={user.name} joined={user.joined} />
+            ))}
+          </div>
+        </div>
+
+        <div className="partnership-content">
+          <h2>Our Partners :</h2>
+          <div className="cards">
+            {partners.map((user) => (
+              <Card key={user._id} name={user.name} joined={user.joined} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
