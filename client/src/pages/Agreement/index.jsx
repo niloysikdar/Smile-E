@@ -17,9 +17,11 @@ const Agreement = () => {
   const [emailSubject, setEmailSubject] = useState("");
   const [signerEmail, setSignerEmail] = useState("");
   const [signerName, setSignerName] = useState("");
+  const [role, setRole] = useState("Volunteer");
+
+  const [isLoading, setLoading] = useState(false);
 
   const isUserLoggedIn = localStorage.getItem("isLoggedIn");
-  // const isUserLoggedIn = true;
 
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
     maxFiles: 1,
@@ -34,18 +36,24 @@ const Agreement = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(docName, emailSubject, signerEmail, signerName);
+    setLoading(true);
     getBase64(acceptedFiles[0], (result) => {
-      sendEnvelope(result, docName, emailSubject, signerEmail, signerName).then(
-        (res) => {
-          clearFields();
-          if (res.status === 201) {
-            swal("Success", "Agreement Sent Successfully !", "success");
-          } else {
-            swal("Error", "Failed to send the Agreement !", "error");
-          }
+      sendEnvelope(
+        result,
+        docName,
+        emailSubject,
+        signerEmail,
+        signerName,
+        role
+      ).then((res) => {
+        clearFields();
+        setLoading(false);
+        if (res.status === 201) {
+          swal("Success", "Agreement Sent Successfully !", "success");
+        } else {
+          swal("Error", "Failed to send the Agreement !", "error");
         }
-      );
+      });
     });
   };
 
@@ -161,7 +169,22 @@ const Agreement = () => {
                 value={signerName}
                 onChange={(e) => setSignerName(e.target.value)}
               />
-              <button type="submit">Send Agreement</button>
+
+              <div className="select-role" style={{ marginTop: "0.8rem" }}>
+                <label htmlFor="role">Select Role:</label>
+                <select
+                  id="role"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                >
+                  <option value="Volunteer">Volunteer</option>
+                  <option value="Partner">Partner</option>
+                </select>
+              </div>
+
+              <button type="submit">
+                {isLoading ? "Sending..." : "Send Agreement"}
+              </button>
             </form>
           )}
         </div>

@@ -5,7 +5,8 @@ const sendEnvelope = async (
   docName,
   emailSubject,
   signerEmail,
-  signerName
+  signerName,
+  role
 ) => {
   const data = {
     accountID: process.env.REACT_APP_ACCOUNT_ID,
@@ -17,6 +18,7 @@ const sendEnvelope = async (
     emailSubject: emailSubject,
     signerEmail: signerEmail,
     signerName: signerName,
+    role: role,
   };
 
   const result = await axios.post("http://localhost:5000/create", data);

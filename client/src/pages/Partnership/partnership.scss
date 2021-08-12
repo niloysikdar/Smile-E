@@ -29,20 +29,30 @@
     }
   }
 
-  .partnership-content {
-    margin-top: 2rem;
-    padding: 0 3rem;
+  .card-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
 
-    .cards {
+    .partnership-content {
+      margin-top: 2rem;
+      padding: 0 3rem;
       display: flex;
+      flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2.5rem;
+      align-items: flex-start;
+      width: 45%;
+      min-width: 400px;
+
+      .cards {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+      }
     }
   }
 }
