@@ -8,9 +8,16 @@
   background-color: $midnightblue;
   height: 75px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+  p {
+    color: #fff;
+    margin-right: 3rem;
+    font-size: 1.6rem;
+    font-style: italic;
+  }
 }
 
 .menu-bars {
