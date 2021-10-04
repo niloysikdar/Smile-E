@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const sendEnvelope = async (
-  documentBase64,
-  docName,
-  emailSubject,
-  signerEmail,
-  signerName,
-  role
+  documentBase64: string,
+  docName: string,
+  emailSubject: string,
+  signerEmail: string,
+  signerName: string,
+  role: string
 ) => {
   const data = {
     accountID: process.env.REACT_APP_ACCOUNT_ID,
