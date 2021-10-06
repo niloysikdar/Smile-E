@@ -18,7 +18,7 @@ const Dashboard = () => {
         </div>
 
         <div className="piechart">
-          <h3 style={{ fontWeight: "400", fontSize: "1.3rem" }}>
+          <h3 style={{ fontWeight: "normal", fontSize: "1.3rem" }}>
             % of overall people whom we helped
           </h3>
           <div style={{ width: "600px", height: "50vh" }}>
