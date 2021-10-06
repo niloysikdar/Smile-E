@@ -1,4 +1,4 @@
-import styles from "./faq.module.scss";
+import styles from './faq.module.scss';
 
 const FAQ = () => {
   return (

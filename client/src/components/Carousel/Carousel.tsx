@@ -1,9 +1,9 @@
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import pic1 from "../../assets/carousel/pic1.jpg";
-import pic2 from "../../assets/carousel/pic2.jpg";
-import "./Carousel.scss";
+import pic1 from '../../assets/carousel/pic1.jpg';
+import pic2 from '../../assets/carousel/pic2.jpg';
+import './Carousel.scss';
 
 const NewCarousel = () => {
   return (
@@ -17,10 +17,10 @@ const NewCarousel = () => {
       showStatus={false}
     >
       <div>
-        <img src={pic1} alt="Carousel" />
+        <img src={pic1} alt='Carousel' />
       </div>
       <div>
-        <img src={pic2} alt="Carousel" />
+        <img src={pic2} alt='Carousel' />
       </div>
     </Carousel>
   );

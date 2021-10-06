@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const sendEnvelope = async (
   documentBase64: string,
@@ -6,12 +6,12 @@ const sendEnvelope = async (
   emailSubject: string,
   signerEmail: string,
   signerName: string,
-  role: string
+  role: string,
 ) => {
   const data = {
     accountID: process.env.REACT_APP_ACCOUNT_ID,
-    username: localStorage.getItem("username"),
-    password: localStorage.getItem("password"),
+    username: localStorage.getItem('username'),
+    password: localStorage.getItem('password'),
     integratorKey: process.env.REACT_APP_INTEGRATION_KEY,
     documentBase64: documentBase64,
     docName: docName,
@@ -21,7 +21,7 @@ const sendEnvelope = async (
     role: role,
   };
 
-  const result = await axios.post("http://localhost:5000/create", data);
+  const result = await axios.post('http://localhost:5000/create', data);
   return result;
 };
 

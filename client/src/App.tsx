@@ -1,34 +1,34 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 
-import Sidebar from "./components/Sidebar/Sidebar";
-import Home from "./pages/Home";
-import { Dashboard } from "./pages/Dashboard";
-import { Partnership } from "./pages/Partnership";
-import Agreement from "./pages/Agreement";
-import FAQ from "./pages/FAQ/FAQ";
-import { Logout } from "./pages/Logout";
+import Sidebar from './components/Sidebar/Sidebar';
+import Home from './pages/Home';
+import { Dashboard } from './pages/Dashboard';
+import { Partnership } from './pages/Partnership';
+import Agreement from './pages/Agreement';
+import FAQ from './pages/FAQ/FAQ';
+import { Logout } from './pages/Logout';
 
 const App = () => {
   return (
     <>
       <Sidebar />
       <Switch>
-        <Route path="/" exact>
+        <Route path='/' exact>
           <Home />
         </Route>
-        <Route path="/dashboard">
+        <Route path='/dashboard'>
           <Dashboard />
         </Route>
-        <Route path="/partnership">
+        <Route path='/partnership'>
           <Partnership />
         </Route>
-        <Route path="/agreement">
+        <Route path='/agreement'>
           <Agreement />
         </Route>
-        <Route path="/faq">
+        <Route path='/faq'>
           <FAQ />
         </Route>
-        <Route path="/logout">
+        <Route path='/logout'>
           <Logout />
         </Route>
       </Switch>
