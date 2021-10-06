@@ -9,31 +9,31 @@ import FAQ from './pages/FAQ/FAQ';
 import { Logout } from './pages/Logout';
 
 const App = () => {
-	return (
-		<>
-			<Sidebar />
-			<Switch>
-				<Route path='/' exact>
-					<Home />
-				</Route>
-				<Route path='/dashboard'>
-					<Dashboard />
-				</Route>
-				<Route path='/partnership'>
-					<Partnership />
-				</Route>
-				<Route path='/agreement'>
-					<Agreement />
-				</Route>
-				<Route path='/faq'>
-					<FAQ />
-				</Route>
-				<Route path='/logout'>
-					<Logout />
-				</Route>
-			</Switch>
-		</>
-	);
+  return (
+    <>
+      <Sidebar />
+      <Switch>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+        <Route path='/dashboard'>
+          <Dashboard />
+        </Route>
+        <Route path='/partnership'>
+          <Partnership />
+        </Route>
+        <Route path='/agreement'>
+          <Agreement />
+        </Route>
+        <Route path='/faq'>
+          <FAQ />
+        </Route>
+        <Route path='/logout'>
+          <Logout />
+        </Route>
+      </Switch>
+    </>
+  );
 };
 
 export default App;

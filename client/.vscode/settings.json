@@ -1,16 +1,16 @@
 {
-	"files.eol": "\n",
-	"editor.formatOnSave": true,
-	"search.exclude": {
-		"node_modules/": true
-	},
-	"files.exclude": {
-		"node_modules/": true,
-		"build/": true,
-		"dist/": true
-	},
-	"typescript.tsdk": "node_modules\\typescript\\lib",
-	"prettier.semi": true,
-	"prettier.singleQuote": true,
-	"prettier.jsxSingleQuote": true
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "search.exclude": {
+    "node_modules/": true
+  },
+  "files.exclude": {
+    "node_modules/": true,
+    "build/": true,
+    "dist/": true
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true
 }

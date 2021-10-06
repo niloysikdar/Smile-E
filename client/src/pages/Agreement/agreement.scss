@@ -1,140 +1,140 @@
 @import '../../constants/colors';
 
 .agreement {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-content: flex-start;
-	align-items: center;
-	padding-top: 100px;
-	background: $bluebackground;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
+  background: $bluebackground;
 
-	h2 {
-		font-weight: 500;
-		font-size: 1.7rem;
-	}
+  h2 {
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
 
-	.agreement-content {
-		display: flex;
-		justify-content: center;
-		margin-top: 2rem;
-		width: 100%;
-		flex-wrap: wrap;
+  .agreement-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
 
-		.dropContainer {
-			height: 65vh;
-			width: 650px;
-			padding: 3rem;
-			padding-top: 0;
-			display: flex;
-			flex-direction: column;
-			gap: 5rem;
-			justify-content: center;
-			align-items: flex-start;
+    .dropContainer {
+      height: 65vh;
+      width: 650px;
+      padding: 3rem;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      justify-content: center;
+      align-items: flex-start;
 
-			.dropzone {
-				height: 100%;
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				background: #f5f3f3;
-				border: 2px dotted #000;
-				border-radius: 10px;
-				cursor: pointer;
-			}
-		}
+      .dropzone {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #f5f3f3;
+        border: 2px dotted #000;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
 
-		.submit-form {
-			text-align: start;
-			padding: 2rem;
-			margin: 0 3rem;
-			margin-bottom: 2rem;
-			border-radius: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .submit-form {
+      text-align: start;
+      padding: 2rem;
+      margin: 0 3rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-			p {
-				font-size: 1.2rem;
-				margin-bottom: 1.5rem;
-			}
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
 
-			.docusign-login {
-				text-decoration: none;
-				padding: 0.6rem 1.2rem;
-				background-color: $midnightblue;
-				color: #fff;
-				border: none;
-				outline: none;
-				border-radius: 10px;
-				font-size: 1.1rem;
-				cursor: pointer;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-			}
+      .docusign-login {
+        text-decoration: none;
+        padding: 0.6rem 1.2rem;
+        background-color: $midnightblue;
+        color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
 
-			form {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-				label {
-					font-size: 1.2rem;
-					margin: 0.5rem 0;
-					color: #000000a4;
-				}
+        label {
+          font-size: 1.2rem;
+          margin: 0.5rem 0;
+          color: #000000a4;
+        }
 
-				input,
-				textarea {
-					color: #000000b9;
-					font-size: 1.1rem;
-					padding: 0.75rem 1rem;
-					margin-bottom: 1rem;
-					width: 350px;
-					outline: none;
-					border-radius: 10px;
-					border: none;
-					background: $bluebackground;
-					box-shadow: 0 4px 8px 0 $lightblue;
-				}
+        input,
+        textarea {
+          color: #000000b9;
+          font-size: 1.1rem;
+          padding: 0.75rem 1rem;
+          margin-bottom: 1rem;
+          width: 350px;
+          outline: none;
+          border-radius: 10px;
+          border: none;
+          background: $bluebackground;
+          box-shadow: 0 4px 8px 0 $lightblue;
+        }
 
-				textarea {
-					min-height: 70px;
-				}
+        textarea {
+          min-height: 70px;
+        }
 
-				button {
-					margin-top: 1.5rem;
-					padding: 0.5rem 1.2rem;
-					background-color: $midnightblue;
-					color: #fff;
-					border: none;
-					outline: none;
-					border-radius: 10px;
-					font-size: 1.1rem;
-					cursor: pointer;
-					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-					transition: 0.3s all ease-in-out;
+        button {
+          margin-top: 1.5rem;
+          padding: 0.5rem 1.2rem;
+          background-color: $midnightblue;
+          color: #fff;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          font-size: 1.1rem;
+          cursor: pointer;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          transition: 0.3s all ease-in-out;
 
-					&:hover {
-						box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.45);
-					}
-				}
-			}
-		}
-	}
+          &:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.45);
+          }
+        }
+      }
+    }
+  }
 }
 
 #role {
-	color: #000000b9;
-	font-size: 1.1rem;
-	padding: 0.5rem 1rem;
-	margin-bottom: 1rem;
-	margin-left: 1rem;
-	outline: none;
-	border-radius: 10px;
-	border: none;
-	background: $bluebackground;
-	box-shadow: 0 4px 8px 0 $lightblue;
-	cursor: pointer;
+  color: #000000b9;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  background: $bluebackground;
+  box-shadow: 0 4px 8px 0 $lightblue;
+  cursor: pointer;
 }

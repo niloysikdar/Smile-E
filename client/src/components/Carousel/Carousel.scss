@@ -1,14 +1,14 @@
 .thumbs {
-	&.animated {
-		display: none;
-	}
+  &.animated {
+    display: none;
+  }
 }
 
 .thumbs-wrapper {
-	display: none;
+  display: none;
 }
 
 img {
-	height: calc(100vh - 60px);
-	object-fit: cover;
+  height: calc(100vh - 60px);
+  object-fit: cover;
 }
