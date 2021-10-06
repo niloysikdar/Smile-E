@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useDropzone } from "react-dropzone";
+import { useEffect, useState } from "react";
+import { FileWithPath, useDropzone } from "react-dropzone";
 import swal from "sweetalert";
 
-import { sendEnvelope } from "../../api";
+import { sendEnvelope } from "../../api/sendEnvelope";
 import { getBase64 } from "./convertToBase64";
 import "./agreement.scss";
 
@@ -20,24 +20,31 @@ const Agreement = () => {
   const [role, setRole] = useState("Volunteer");
 
   const [isLoading, setLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState("false");
 
-  const isUserLoggedIn = localStorage.getItem("isLoggedIn");
+  useEffect(() => {
+    setIsLoggedIn(
+      localStorage.getItem("isLoggedIn") !== null
+        ? localStorage.getItem("isLoggedIn")!.toString()
+        : "false"
+    );
+  }, []);
 
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
     maxFiles: 1,
     accept: ".pdf, .docx",
   });
 
-  const files = acceptedFiles.map((file) => (
+  const files = acceptedFiles.map((file: FileWithPath) => (
     <li key={file.path}>
       {file.path} - {file.size} bytes
     </li>
   ));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    getBase64(acceptedFiles[0], (result) => {
+    getBase64(acceptedFiles[0], (result: string) => {
       sendEnvelope(
         result,
         docName,
@@ -57,10 +64,10 @@ const Agreement = () => {
     });
   };
 
-  const handleSignIn = (e) => {
+  const handleSignIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("username", username);
       localStorage.setItem("password", password);
       window.location.reload();
@@ -80,7 +87,7 @@ const Agreement = () => {
     <div className="agreement">
       <h2>E-Agreement Portal</h2>
       <div className="agreement-content">
-        {isUserLoggedIn && (
+        {isLoggedIn === "true" && (
           <section className="dropContainer">
             <div {...getRootProps({ className: "dropzone" })}>
               <input {...getInputProps()} />
@@ -97,7 +104,7 @@ const Agreement = () => {
           </section>
         )}
         <div className="submit-form">
-          {!isUserLoggedIn ? (
+          {isLoggedIn === "false" ? (
             <>
               <p>Authenticate with your Admin DocuSign Account</p>
 
@@ -117,6 +124,7 @@ const Agreement = () => {
                   type="password"
                   id="password"
                   required
+                  autoComplete="true"
                   placeholder="Admin Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -142,7 +150,6 @@ const Agreement = () => {
 
               <label htmlFor="emailsubject">Email Subject</label>
               <textarea
-                type="text"
                 placeholder="Email Subject"
                 id="emailsubject"
                 required

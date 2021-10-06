@@ -14,7 +14,7 @@ const Logout = () => {
         title: "Are you sure?",
         text: "Do you want to Logout from your DocuSign account ?",
         icon: "warning",
-        buttons: true,
+        buttons: ["Cancel", "Confirm"],
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
