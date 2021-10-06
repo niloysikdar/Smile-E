@@ -10,11 +10,11 @@ const NewCarousel = () => {
     <Carousel
       autoPlay
       infiniteLoop
-      interval="3000"
-      transitionTime="1000"
-      swipeable="false"
-      showArrows="false"
-      showStatus="false"
+      interval={3000}
+      transitionTime={1000}
+      swipeable={false}
+      showArrows={false}
+      showStatus={false}
     >
       <div>
         <img src={pic1} alt="Carousel" />
