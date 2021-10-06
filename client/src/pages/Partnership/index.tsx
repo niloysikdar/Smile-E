@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { UserType } from "../../types/UserType";
+
 import { getUsers } from "../../api/getUsers";
 import { Card } from "./Card";
 import "./partnership.scss";
 
 const Partnership = () => {
-  const [partners, setPartners] = useState([]);
-  const [volunteers, setVolunteer] = useState([]);
+  const [partners, setPartners] = useState<UserType[]>([]);
+  const [volunteers, setVolunteer] = useState<UserType[]>([]);
 
   useEffect(() => {
     fetchData();
@@ -16,7 +18,7 @@ const Partnership = () => {
   const fetchData = async () => {
     const result = await getUsers();
     if (result.status === 200) {
-      const data = result.data;
+      const data: UserType[] = result.data;
       setPartners(data.filter((item) => item.role !== "Volunteer"));
       setVolunteer(data.filter((item) => item.role === "Volunteer"));
     }
@@ -25,7 +27,7 @@ const Partnership = () => {
   return (
     <div className="partnership">
       <h2>Partner with or Join us as Volunteer</h2>
-      {localStorage.getItem("isLoggedIn") && (
+      {localStorage.getItem("isLoggedIn") === "true" && (
         <Link to="/agreement" className="button-to-agreement">
           Send the E-Agreement
         </Link>
