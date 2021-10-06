@@ -1,14 +1,14 @@
-@import "../../constants/colors";
+@import '../../constants/colors';
 
 .logout {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $bluebackground;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $bluebackground;
 
-  h2 {
-    letter-spacing: 0.3rem;
-  }
+	h2 {
+		letter-spacing: 0.3rem;
+	}
 }

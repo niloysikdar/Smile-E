@@ -1,6 +1,6 @@
 export interface UserType {
-  _id: string;
-  name: string;
-  role: string;
-  joined: string;
+	_id: string;
+	name: string;
+	role: string;
+	joined: string;
 }

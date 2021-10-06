@@ -9,10 +9,3 @@ indent_style = tab
 insert_final_newline = true
 max_line_length = 80
 trim_trailing_whitespace = true
-
-[*.md]
-max_line_length = 0
-trim_trailing_whitespace = true
-
-[COMMIT_EDITMSG]
-max_line_length = 0
