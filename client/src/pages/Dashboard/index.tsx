@@ -9,17 +9,17 @@ const Dashboard = () => {
       <h2>Dashboard</h2>
       <div className='charts'>
         <div className='barcharts'>
-          <div style={chartDivStyle}>
+          <div className='chartDiv'>
             <VerticalBarChart />
           </div>
-          <div style={{ ...chartDivStyle, marginTop: '20px' }}>
+          <div className='chartDiv' style={{ marginTop: '20px' }}>
             <HorizontalBarChart />
           </div>
         </div>
 
         <div className='piechart'>
-          <h3 style={{ fontWeight: 'normal', fontSize: '1.3rem' }}>% of overall people whom we helped</h3>
-          <div style={{ width: '600px', height: '50vh' }}>
+          <h4>% of overall people whom we helped</h4>
+          <div className='piechartdiv'>
             <Piechart />
           </div>
         </div>
@@ -27,7 +27,5 @@ const Dashboard = () => {
     </div>
   );
 };
-
-const chartDivStyle = { width: '550px' };
 
 export { Dashboard };
