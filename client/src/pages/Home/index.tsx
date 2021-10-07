@@ -10,7 +10,7 @@ const Home = () => {
       <div className={styles.content}>
         <h2>Smile-E</h2>
         <h3>Sharing smiles with the world</h3>
-        <div className='buttons'>
+        <div className={styles.buttons}>
           <Link to='/partnership' className={styles.button}>
             Partnership
           </Link>

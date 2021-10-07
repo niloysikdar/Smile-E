@@ -14,7 +14,7 @@ const data = {
 };
 
 const Piechart = () => {
-  return <Pie data={data} height={5} width={5} options={{ maintainAspectRatio: false }} />;
+  return <Pie data={data} options={{ maintainAspectRatio: false }} style={{ height: '100%', width: '100%' }} />;
 };
 
 export { Piechart };

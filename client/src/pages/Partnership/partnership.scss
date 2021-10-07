@@ -1,16 +1,22 @@
-@import '../../constants/colors';
+@import '../../ui/colors';
+@import '../../ui/breakpoints';
 
 .partnership {
   min-height: 100vh;
   width: 100%;
   text-align: center;
-  padding-top: 90px;
+  padding: 90px 20px 30px 20px;
   background: $bluebackground;
 
   h2 {
     font-weight: 500;
     font-size: 2.2rem;
     margin-bottom: 2rem;
+
+    @include md {
+      font-size: 1.8rem;
+      line-height: 30px;
+    }
   }
 
   .button-to-agreement {
@@ -24,6 +30,10 @@
     box-shadow: 0 4px 8px 0 rgba(75, 74, 74, 0.2);
     transition: 0.3s all ease-in-out;
 
+    @include md {
+      font-size: 1.1rem;
+    }
+
     &:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.45);
     }
@@ -35,6 +45,11 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
+    @include md {
+      width: 100%;
+      gap: 1.5rem;
+    }
+
     .partnership-content {
       margin-top: 2rem;
       padding: 0 3rem;
@@ -45,10 +60,27 @@
       width: 45%;
       min-width: 400px;
 
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+
+      @include md {
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        margin-top: 1.5rem;
+        justify-content: center;
+        align-items: center;
+      }
+
       h3 {
         font-weight: 500;
         font-size: 1.5rem;
         margin-bottom: 2rem;
+
+        @include md {
+          margin-bottom: 1rem;
+        }
       }
 
       .cards {
@@ -58,6 +90,10 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 2.5rem;
+
+        @include md {
+          justify-content: center;
+        }
       }
     }
   }
@@ -70,9 +106,18 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.45);
   text-align: start;
 
+  @include md {
+    padding: 15px;
+  }
+
   h4 {
     letter-spacing: 2px;
     font-size: 1.2rem;
+
+    @include md {
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+    }
   }
 
   p {

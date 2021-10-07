@@ -1,4 +1,5 @@
-@import '../../constants/colors';
+@import '../../ui/colors';
+@import '../../ui/breakpoints';
 
 .agreement {
   min-height: 100vh;
@@ -8,7 +9,7 @@
   text-align: center;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 100px;
+  padding: 90px 20px 30px 20px;
   background: $bluebackground;
 
   h2 {
@@ -56,6 +57,12 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
+      @include md {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+      }
+
       p {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
@@ -97,6 +104,10 @@
           border: none;
           background: $bluebackground;
           box-shadow: 0 4px 8px 0 $lightblue;
+
+          @include md {
+            width: 100%;
+          }
         }
 
         textarea {

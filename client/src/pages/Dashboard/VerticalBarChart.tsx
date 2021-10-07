@@ -39,9 +39,7 @@ const options = {
 const VerticalBarChart = () => {
   return (
     <>
-      <h4 style={{ fontWeight: 'normal', fontSize: '1.1rem' }}>
-        Total number of students whom we provided free education
-      </h4>
+      <h4>Total number of students whom we provided free education</h4>
       <Bar data={data} options={options} />
     </>
   );

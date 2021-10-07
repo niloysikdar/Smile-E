@@ -1,4 +1,5 @@
-@import '../../constants/colors';
+@import '../../ui/colors';
+@import '../../ui/breakpoints';
 
 .faq {
   min-height: 100vh;
@@ -8,7 +9,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 100px;
+  padding: 90px 25px 25px 25px;
+  text-align: center;
 
   h2 {
     font-weight: 500;
@@ -19,6 +21,11 @@
   h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    font-weight: 500;
+
+    @include md {
+      font-size: 1.4rem;
+    }
   }
 
   p {
