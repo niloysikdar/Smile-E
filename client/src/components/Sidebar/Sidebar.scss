@@ -1,4 +1,5 @@
-@import '../../constants/colors';
+@import '../../ui/colors';
+@import '../../ui/breakpoints';
 
 .navbar {
   position: fixed;
@@ -17,6 +18,13 @@
     margin-right: 3rem;
     font-size: 1.6rem;
     font-style: italic;
+
+    @include md {
+      font-size: 1.4rem;
+      margin: 0 2rem;
+      text-align: left;
+      line-height: 30px;
+    }
   }
 }
 
@@ -25,6 +33,10 @@
   font-size: 2rem;
   background: none;
   cursor: pointer;
+
+  @include md {
+    margin-left: 1.5rem;
+  }
 }
 
 .nav-menu {

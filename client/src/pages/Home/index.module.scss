@@ -1,10 +1,13 @@
-@import '../../constants/colors';
+@import '../../ui/colors';
+@import '../../ui/breakpoints';
 
 .home {
   min-height: 100vh;
-  min-width: 100%;
+  width: 100%;
   background-color: $bluebackground;
   padding-top: 60px;
+  @include md {
+  }
 
   .content {
     position: absolute;
@@ -27,6 +30,9 @@
       font-weight: bold;
       letter-spacing: 5px;
       text-align: center;
+      @include md {
+        font-size: 2.5rem;
+      }
     }
 
     h3 {
@@ -36,12 +42,23 @@
       letter-spacing: 5px;
       margin-bottom: 3rem;
       text-align: center;
+      @include md {
+        font-size: 1.8rem;
+      }
+    }
+
+    .buttons {
+      @include md {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
 
 .button {
   text-decoration: none;
+  text-align: center;
   background: $midnightblue;
   margin: 35px 20px;
   padding: 10px 35px;
@@ -50,6 +67,13 @@
   font-size: 1.6rem;
   font-weight: 500;
   transition: 0.4s all ease-in-out;
+
+  @include md {
+    margin: 15px 0;
+    padding: 8px 18px;
+    font-size: 1.4rem;
+    width: 190px;
+  }
 
   &:hover {
     background: $bluehover;
