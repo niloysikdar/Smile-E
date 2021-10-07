@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="https://bit.ly/3or4eng" alt="Logo" width="75%">
+  <img src="https://i.imgur.com/UfKALPO.png" alt="Logo" width="80%">
 
   <h1 align="center">Smile-E</h1>
 
