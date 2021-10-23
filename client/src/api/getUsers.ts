@@ -1,8 +1,7 @@
 import axios from 'axios';
+import { BASEURL } from './baseURL';
 
-const getUsers = async () => {
-  const result = await axios.get('http://localhost:5000/users');
+export const getUsers = async () => {
+  const result = await axios.get(`${BASEURL}/users`);
   return result;
 };
-
-export { getUsers };

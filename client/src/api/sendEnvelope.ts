@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { BASEURL } from './baseURL';
 
-const sendEnvelope = async (
+export const sendEnvelope = async (
   documentBase64: string,
   docName: string,
   emailSubject: string,
@@ -21,8 +22,6 @@ const sendEnvelope = async (
     role: role,
   };
 
-  const result = await axios.post('http://localhost:5000/create', data);
+  const result = await axios.post(`${BASEURL}/create`, data);
   return result;
 };
-
-export { sendEnvelope };
