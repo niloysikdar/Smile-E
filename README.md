@@ -136,6 +136,19 @@ To get a local copy up and running follow these simple steps.
     The page will reload if you make edits.\
      You will also see any lint errors in the console.
 
+## Screenshots
+
+<p align="center">
+  <img src="https://i.imgur.com/4IVN47I.png" height="220">
+  <img src="https://i.imgur.com/eccO2XM.png" height="220">
+  <img src="https://i.imgur.com/FX7zbcE.png" height="220">
+  <img src="https://i.imgur.com/ZgHXyME.png" height="220">
+  <img src="https://i.imgur.com/j0wDeoV.png" height="220">
+  <img src="https://i.imgur.com/hkbGeMb.png" height="220">
+  <img src="https://i.imgur.com/oYhSUxS.png" height="220">
+  <img src="https://i.imgur.com/meKAAtO.png" height="220">
+</p>
+
 <!-- ROADMAP -->
 
 ## Roadmap
